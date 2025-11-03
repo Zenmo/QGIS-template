@@ -1848,7 +1848,7 @@
         <Option type="List" name="PREFIX">
           <Option type="Map">
             <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="" name="static_value"/>
+            <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
       </Option>
@@ -4090,8 +4090,8 @@
             <Option type="int" value="2" name="source"/>
             <Option type="List" name="static_value">
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="&quot;buurtcode&quot;" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="districtcode" name="name"/>
@@ -4101,8 +4101,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="&quot;buurtnaam&quot;" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="districtname" name="name"/>
@@ -4112,8 +4112,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="&quot;wijkcode&quot;" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="neighbourhoodcode" name="name"/>
@@ -4123,8 +4123,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="'REGION'" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="neighbourhoodtype" name="name"/>
@@ -4134,8 +4134,96 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_house_elec_delivery_kwh_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_house_gas_delivery_m3_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_number_of_cars_per_house" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_comp_elec_delivery_kwh_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_comp_gas_delivery_m3_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_cars" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_vans" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_trucks" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="y(centroid($geometry))" name="expression"/>
                 <Option type="int" value="10" name="length"/>
                 <Option type="QString" value="latitude" name="name"/>
@@ -4145,8 +4233,8 @@
                 <Option type="QString" value="double precision" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="x(centroid($geometry))" name="expression"/>
                 <Option type="int" value="10" name="length"/>
                 <Option type="QString" value="longitude" name="name"/>
@@ -4156,8 +4244,8 @@
                 <Option type="QString" value="double precision" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="geom_to_wkt(@geometry)" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="polygon" name="name"/>
@@ -4235,8 +4323,8 @@
             <Option type="int" value="2" name="source"/>
             <Option type="List" name="static_value">
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="'BU666'" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="districtcode" name="name"/>
@@ -4246,8 +4334,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="'Anti-laag'" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="districtname" name="name"/>
@@ -4257,8 +4345,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="'WK666'" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="neighbourhoodcode" name="name"/>
@@ -4268,8 +4356,8 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="'ANTI_LAYER'" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="neighbourhoodtype" name="name"/>
@@ -4279,8 +4367,96 @@
                 <Option type="QString" value="text" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_house_elec_delivery_kwh_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_house_gas_delivery_m3_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="avg_number_of_cars_per_house" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_comp_elec_delivery_kwh_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_comp_gas_delivery_m3_p_yr" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="6" name="type"/>
+                <Option type="QString" value="double precision" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_cars" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_vans" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
+                <Option type="QString" value="" name="expression"/>
+                <Option type="int" value="0" name="length"/>
+                <Option type="QString" value="total_nr_comp_trucks" name="name"/>
+                <Option type="int" value="0" name="precision"/>
+                <Option type="int" value="0" name="sub_type"/>
+                <Option type="int" value="4" name="type"/>
+                <Option type="QString" value="int8" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="y(centroid($geometry))" name="expression"/>
                 <Option type="int" value="10" name="length"/>
                 <Option type="QString" value="latitude" name="name"/>
@@ -4290,8 +4466,8 @@
                 <Option type="QString" value="double precision" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="x(centroid($geometry))" name="expression"/>
                 <Option type="int" value="10" name="length"/>
                 <Option type="QString" value="longitude" name="name"/>
@@ -4301,8 +4477,8 @@
                 <Option type="QString" value="double precision" name="type_name"/>
               </Option>
               <Option type="Map">
-                <Option type="invalid" name="alias"/>
-                <Option type="invalid" name="comment"/>
+                <Option type="QString" value="" name="alias"/>
+                <Option type="QString" value="" name="comment"/>
                 <Option type="QString" value="geom_to_wkt(@geometry)" name="expression"/>
                 <Option type="int" value="0" name="length"/>
                 <Option type="QString" value="polygon" name="name"/>
