@@ -1,13 +1,13 @@
-# QGIS Template (14-05-25 – QGIS Versie 3.40)
+# QGIS Template (06-01-26 – QGIS Versie 3.40.14)
 Deze repository bestaat uit twee delen: een template QGIS bestand met zoveel mogelijk openbaar publieke data, en een modelontwerp binnen QGIS om deze data zo makkelijk mogelijk te verwerken voor AnyLogic import. Deze ReadMe zal een korte rondleiding geven en uitleggen hoe het modelontwerp te gebruiken is.
 ## Wat te verwachten
 Deze repository bevat de volgende dingen:
 * Een verzameling van de essentiële publieke data: panden, adressen en buurten
 * Vrijwel alle beschikbare kabel- en trafodata van Enexis, Stedin en Liander
-* Extra data ter aanvulling, zoals het jaarverbruik van kleinverbruikers op postcode-6 niveau en de beheergebieden van Enexis, Stedin en Liander
+* Extra data ter aanvulling, zoals het jaarverbruik van kleinverbruikers op postcode-6 niveau, energielabels, en de beheergebieden van Enexis, Stedin en Liander
 
 Deze repository heeft (nog) niet de volgende dingen:
-* Kabeldata voor Stedin. De praktische reden hiervoor is dat deze niet via een API aangeboden wordt en dat het bestand te groot is om in deze repository toe te voegen. Je kunt deze zelf [hier](https://www.stedin.net/zakelijk/open-data/liggingsdata-kabels-en-leidingen) downloaden en importeren.
+* Kabeldata voor Stedin. De praktische reden hiervoor is dat deze niet via een API aangeboden wordt en dat het bestand te groot is om in deze repository toe te voegen. Je kunt deze zelf [hier](https://www.stedin.net/zakelijk/open-data/liggingsdata-kabels-en-leidingen) downloaden en importeren. Kabeldata voor Stedin-Zeeland is wel inbegrepen.
 * Kabel- en trafodata voor de kleinere providers buiten de bedieningsgebieden van Enexis, Stedin en Liander. Zodra we zelf hiermee te maken krijgen, zullen ze worden toegevoegd.
 * Detailinformatie per trafo. Hoewel we wel weten waar de trafo’s staan, weten we niet precies welke panden hierop aangesloten staan of wat voor capaciteit ze hebben.
 * Algemene zonnedata. Hoewel deze data wel openbaar beschikbaar zou moeten zijn (zie zonnedakje), is hier nog geen API of andere bron bij ons voor bekend.
