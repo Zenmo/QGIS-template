@@ -1,0 +1,9 @@
+QGIS-template API URLs:
+
+WFS
+- Enexis: https://opendata.enexis.nl/geoserver/wfs?request=getcapabilities
+- Gemeenten: https://service.pdok.nl/kadaster/brk-bestuurlijke-gebieden/wfs/v1_0
+
+ArcGIS REST-servers
+- Energielabels: https://services.arcgis.com/nSZVuSZjHpEZZbRo/arcgis/rest/services/Energielabels/FeatureServer
+- Liander: https://services1.arcgis.com/v6W5HAVrpgSg3vts/arcgis/rest/services/Liander_Open_Data_Elektra/FeatureServer
