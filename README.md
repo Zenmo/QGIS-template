@@ -14,6 +14,14 @@ Deze repository heeft (nog) niet de volgende dingen:
 * Aanvullende gebiedspecifieke data, zoals verbruiksprofielen van trafo’s, zonnepanelen per pand, parkeervakken en laadpalen. Deze zullen zelf opgevraagd moeten worden bij de gemeente of andere verantwoordelijken.
 * Jaarverbruik van grootverbruikers. Dit is vertrouwelijke data die zelf bij de gebruikers opgevraagd zal moeten worden.
 
+## Script installeren (eenmalig)
+Beide modellen gebruiken het script `Scripts/Buildings3D.py` (blok “Export panden 3D”). Zonder dit script geeft QGIS bij het openen van het model aan dat er een algoritme ontbreekt en kan het model niet draaien. Installeer het daarom eerst:
+
+1. Ga naar “Instellingen” → “Opties…” → “Processing” → “Providers” → “Scripts” → “Scripts folder(s)”.
+2. Voeg de map `Scripts` uit deze repository toe en klik op “OK”.
+
+Het script verschijnt nu in de Processing Toolbox onder “Scripts” → “LUX” → “Buildings3D (3DBAG LoD2.2)”. Omdat QGIS het script direct uit de repository leest, krijg je na een `git pull` automatisch de nieuwste versie.
+
 ## Het model openen
 Het model kan in QGIS geopend worden via de Modelontwerper. Deze is te vinden in het hoofdmenu onder “Processing” en daarna “Modelontwerper”, of met de sneltoets Ctrl+Alt+G op Windows.
 
@@ -31,7 +39,8 @@ Zodra het gewenste model geopend is, verschijnt de diagramweergave van het model
 4. Trafo’s: Betreft voornamelijk de locaties van trafostations met wat algemene aanvullende informatie, afhankelijk van de netbeheerder. De laag die hiervoor gebruikt wordt verschilt per netbeheerder.
 5. Net neighbours: Op basis van een nearest-neighbour algoritme wordt een ruwe indeling gemaakt van panden per trafo. Deze stap wordt niet gedaan in het bedrijvenmodel, aangezien dit daar niet nodig is.
 6. Kabels (optioneel): Kabelsegmenten doen we op basis van een gemeenschappelijk label groeperen en exporteren. We kunnen op dit moment nog niet kabels aan specifieke trafo’s koppelen, hoewel we dit wel graag in de toekomst nog zouden willen doen.
-7. Output: Voor punten 2 t/m 6 wordt er ieder een excel-bestand gegenereerd wat vrijwel direct in AnyLogic ingeladen kan worden.
+7. Panden 3D: Voor dezelfde panden als in Buildings_ worden de 3D-vormen (LoD2.2) opgehaald uit [3DBAG](https://3dbag.nl). Zie [Buildings3D](#buildings3d) hieronder.
+8. Output: Voor punten 2 t/m 7 wordt er ieder een excel-bestand gegenereerd wat vrijwel direct in AnyLogic ingeladen kan worden.
 
 Omdat sommige invoer afhankelijk is van welke data je gebruikt, kan het zijn dat er bepaalde code verbonden en geactiveerd of gedeactiveerd moet worden. **Zorg ervoor dat de te deactiveren code niet meer als invoer wordt gebruikt voor code die je wel wilt behouden.** Een stuk code wat gedeactiveerd wordt zal namelijk alles wat erna komt ook deactiveren. Op dezelfde manier zal een stuk te activeren code stapsgewijs van voren naar achteren geactiveerd moeten worden.
 
@@ -50,7 +59,7 @@ Voor Buurt-selected en Panden-selected is er de optie om “Alleen geselecteerde
 
 ![Configuratie output](/Media/Modelontwerper-configuratie-output.png "Configuratie output")
 
-Als je het model alleen maar wilt uitvoeren voor de export, moet er alleen voor de variabelen Buildings_, Neighbourhoods_, GridNodes_ NetNeighbours_ en Cables_ een bestandsnaam en -locatie gekozen worden. Als je na uitvoering nog met het QGIS-bestand verder aan de slag wilt, kan het handig zijn om de tijdelijke lagen ook alvast op te slaan, hoewel dit ook nog kan nadat het model klaar is met uitvoeren.
+Als je het model alleen maar wilt uitvoeren voor de export, moet er alleen voor de variabelen Buildings_, Buildings3D_, RoofSurfaces_, Neighbourhoods_, GridNodes_ NetNeighbours_ en Cables_ een bestandsnaam en -locatie gekozen worden. Als je na uitvoering nog met het QGIS-bestand verder aan de slag wilt, kan het handig zijn om de tijdelijke lagen ook alvast op te slaan, hoewel dit ook nog kan nadat het model klaar is met uitvoeren.
 
 Als alles naar wens is, kan je op de knop “Uitvoeren” klikken om het model te starten. De eerste keer kan dit enkele minuten duren.
 
@@ -66,3 +75,18 @@ De QGIS-lagen worden na uitvoering automatisch op de map getekend. Hierboven is 
 Wijzingen die na uitvoering van het model aangebracht worden, zoals het plaatsen van laadpalen, extra kolommen of iets anders, zullen handmatig geëxporteerd moeten worden. Hiervoor zul je de Attributentabel (sneltoets F6 op Windows) moeten gebruiken of door te rechtsklikken op de gewenste laag en “Exporteren” te selecteren. Hiervoor kun je zelf het gewenste format kiezen.
 
 Als je het gehele QGIS-project wilt opslaan om dit later nog een keer te kunnen gebruiken, selecteer dan “Opslaan als” of gebruik de sneltoetscombinatie Ctrl+Shift+S op Windows.
+
+## Buildings3D
+Het blok “Export panden 3D” haalt voor alle panden uit Buildings_ de 3D-vorm (LoD2.2) op uit de [3DBAG-API](https://api.3dbag.nl) (CC BY 4.0, geen sleutel nodig, wel internet). Het levert:
+
+* **Buildings3D_**: één rij per pand met `building_id`, `n_surfaces`, `n_vertices` en `polygon_3d` (een `MULTIPOLYGON Z` in WGS84, hoogtes in meters boven maaiveld). Dit is hetzelfde formaat als de demodata in lux2. Sla op als `.xlsx` of `.csv`; LUX leest beide.
+* **Buurt-Buildings3D / Bedrijf-Buildings3D**: dezelfde 3D-vormen als QGIS-laag, met per pand `height_m` en `footprint_ratio`. Om ze in 3D te bekijken: kies in de laageigenschappen onder “3D-weergave” een symbool en open een 3D-kaartweergave.
+* **RoofSurfaces_**: één rij per dakvlak met oppervlakte (zonder openingen), oriëntatie, hellingshoek en hoogte. Bedoeld voor een PV-berekening per dakvlak; LUX leest het al in, maar rekent PV-potentie nu nog met het grondoppervlak uit Buildings_.
+
+Waar je op moet letten (staat ook in het logboek na het uitvoeren):
+
+* 3DBAG loopt achter op de BAG. Panden die daarna gebouwd zijn, krijgen geen 3D-vorm en worden in het logboek genoemd.
+* Van sommige panden heeft 3DBAG een oudere versie, bijvoorbeeld van vóór een verbouwing. `footprint_ratio` is het grondoppervlak in 3DBAG gedeeld door dat van het pand in de BAG; panden die meer dan 10% afwijken worden in het logboek genoemd.
+* Een Excel-cel kan maximaal 32.767 tekens bevatten. Een heel groot pand wordt in `.xlsx` daarom met minder decimalen geschreven (7 in plaats van 8, nog steeds op ongeveer een centimeter nauwkeurig). Als het dan nog niet past, kies dan `.csv`.
+
+Het script kan ook los gebruikt worden vanuit de Processing Toolbox, op elke laag met BAG-pand-id’s (`panduid.…`, `NL.IMBAG.Pand.…` of alleen het nummer).
