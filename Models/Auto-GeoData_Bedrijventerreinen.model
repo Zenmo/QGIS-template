@@ -6109,6 +6109,131 @@
         </Option>
       </Option>
     </Option>
+    <Option name="script:buildings3d_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="script:buildings3d" type="QString"/>
+      <Option name="color" value="" type="QString"/>
+      <Option name="comment" type="Map">
+        <Option name="color" value="" type="QString"/>
+        <Option name="component_description" value="3D-panden (LoD2.2) uit 3DBAG; script Scripts/Buildings3D.py" type="QString"/>
+        <Option name="component_height" value="60" type="double"/>
+        <Option name="component_pos_x" value="2563.1555000000003" type="double"/>
+        <Option name="component_pos_y" value="1377.615125" type="double"/>
+        <Option name="component_width" value="100" type="double"/>
+        <Option name="outputs_collapsed" value="true" type="bool"/>
+        <Option name="parameters_collapsed" value="true" type="bool"/>
+      </Option>
+      <Option name="component_description" value="Export panden 3D" type="QString"/>
+      <Option name="component_height" value="30" type="double"/>
+      <Option name="component_pos_x" value="2793.1555000000003" type="double"/>
+      <Option name="component_pos_y" value="1337.615125" type="double"/>
+      <Option name="component_width" value="200" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="script:buildings3d_1" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Bedrijf-Buildings3D" type="Map">
+          <Option name="child_id" value="script:buildings3d_1" type="QString"/>
+          <Option name="color" value="" type="QString"/>
+          <Option name="comment" type="Map">
+            <Option name="color" value="" type="QString"/>
+            <Option name="component_description" value="" type="QString"/>
+            <Option name="component_height" value="60" type="double"/>
+            <Option name="component_pos_x" value="0" type="double"/>
+            <Option name="component_pos_y" value="0" type="double"/>
+            <Option name="component_width" value="100" type="double"/>
+            <Option name="outputs_collapsed" value="true" type="bool"/>
+            <Option name="parameters_collapsed" value="true" type="bool"/>
+          </Option>
+          <Option name="component_description" value="Bedrijf-Buildings3D" type="QString"/>
+          <Option name="component_height" value="30" type="double"/>
+          <Option name="component_pos_x" value="3023.1555000000003" type="double"/>
+          <Option name="component_pos_y" value="1362.615125" type="double"/>
+          <Option name="component_width" value="200" type="double"/>
+          <Option name="default_value" type="Map">
+            <Option name="class" value="QgsProcessingOutputLayerDefinition" type="QString"/>
+            <Option name="create_options"/>
+            <Option name="sink" type="Map">
+              <Option name="active" value="true" type="bool"/>
+              <Option name="type" value="1" type="int"/>
+              <Option name="val" value="TEMPORARY_OUTPUT" type="QString"/>
+            </Option>
+          </Option>
+          <Option name="mandatory" value="true" type="bool"/>
+          <Option name="name" value="Bedrijf-Buildings3D" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+          <Option name="outputs_collapsed" value="true" type="bool"/>
+          <Option name="parameters_collapsed" value="true" type="bool"/>
+        </Option>
+        <Option name="Buildings3D_" type="Map">
+          <Option name="child_id" value="script:buildings3d_1" type="QString"/>
+          <Option name="color" value="" type="QString"/>
+          <Option name="comment" type="Map">
+            <Option name="color" value="" type="QString"/>
+            <Option name="component_description" value="" type="QString"/>
+            <Option name="component_height" value="60" type="double"/>
+            <Option name="component_pos_x" value="0" type="double"/>
+            <Option name="component_pos_y" value="0" type="double"/>
+            <Option name="component_width" value="100" type="double"/>
+            <Option name="outputs_collapsed" value="true" type="bool"/>
+            <Option name="parameters_collapsed" value="true" type="bool"/>
+          </Option>
+          <Option name="component_description" value="Buildings3D_" type="QString"/>
+          <Option name="component_height" value="30" type="double"/>
+          <Option name="component_pos_x" value="3023.1555000000003" type="double"/>
+          <Option name="component_pos_y" value="1317.615125" type="double"/>
+          <Option name="component_width" value="200" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="Buildings3D_" type="QString"/>
+          <Option name="output_name" value="BUILDINGS3D" type="QString"/>
+          <Option name="outputs_collapsed" value="true" type="bool"/>
+          <Option name="parameters_collapsed" value="true" type="bool"/>
+        </Option>
+        <Option name="RoofSurfaces_" type="Map">
+          <Option name="child_id" value="script:buildings3d_1" type="QString"/>
+          <Option name="color" value="" type="QString"/>
+          <Option name="comment" type="Map">
+            <Option name="color" value="" type="QString"/>
+            <Option name="component_description" value="" type="QString"/>
+            <Option name="component_height" value="60" type="double"/>
+            <Option name="component_pos_x" value="0" type="double"/>
+            <Option name="component_pos_y" value="0" type="double"/>
+            <Option name="component_width" value="100" type="double"/>
+            <Option name="outputs_collapsed" value="true" type="bool"/>
+            <Option name="parameters_collapsed" value="true" type="bool"/>
+          </Option>
+          <Option name="component_description" value="RoofSurfaces_" type="QString"/>
+          <Option name="component_height" value="30" type="double"/>
+          <Option name="component_pos_x" value="3023.1555000000003" type="double"/>
+          <Option name="component_pos_y" value="1407.615125" type="double"/>
+          <Option name="component_width" value="200" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" value="true" type="bool"/>
+          <Option name="name" value="RoofSurfaces_" type="QString"/>
+          <Option name="output_name" value="ROOFSURFACES" type="QString"/>
+          <Option name="outputs_collapsed" value="true" type="bool"/>
+          <Option name="parameters_collapsed" value="true" type="bool"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="ID_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="building_id" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:deletecolumn_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
   </Option>
   <Option name="designerParameterValues" type="Map">
     <Option name="adressen" value="Verblijfsobject_97e18db4_4c7a_4782_a9d3_3ce4caf9fe76" type="QString"/>
@@ -6257,6 +6382,33 @@
       <Option name="supports_append" value="true" type="bool"/>
       <Option name="supports_non_file_outputs" value="true" type="bool"/>
     </Option>
+    <Option name="bedrijfbuildings3d" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="2" type="int"/>
+      <Option name="default" type="QgsProcessingOutputLayerDefinition">
+        <Option type="Map">
+          <Option name="create_options"/>
+          <Option name="sink" type="Map">
+            <Option name="active" value="true" type="bool"/>
+            <Option name="type" value="1" type="int"/>
+            <Option name="val" value="TEMPORARY_OUTPUT" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" value="Bedrijf-Buildings3D" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="help" value="" type="QString"/>
+      <Option name="metadata" type="Map">
+        <Option name="_modelChildId" value="script:buildings3d_1" type="QString"/>
+        <Option name="_modelChildOutputName" value="Bedrijf-Buildings3D" type="QString"/>
+        <Option name="_modelChildProvider" value="script" type="QString"/>
+      </Option>
+      <Option name="name" value="bedrijfbuildings3d" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_append" value="false" type="bool"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
     <Option name="bedrijfbuurten" type="Map">
       <Option name="create_by_default" value="true" type="bool"/>
       <Option name="data_type" value="-1" type="int"/>
@@ -6349,6 +6501,23 @@
       <Option name="name" value="bedrijftrafos" type="QString"/>
       <Option name="parameter_type" value="sink" type="QString"/>
       <Option name="supports_append" value="true" type="bool"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="buildings3d_" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" value="Buildings3D_" type="QString"/>
+      <Option name="file_filter" value="Microsoft Excel (*.xlsx);;CSV (*.csv)" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="help" value="" type="QString"/>
+      <Option name="metadata" type="Map">
+        <Option name="_modelChildId" value="script:buildings3d_1" type="QString"/>
+        <Option name="_modelChildOutputName" value="Buildings3D_" type="QString"/>
+        <Option name="_modelChildProvider" value="script" type="QString"/>
+      </Option>
+      <Option name="name" value="buildings3d_" type="QString"/>
+      <Option name="parameter_type" value="fileDestination" type="QString"/>
       <Option name="supports_non_file_outputs" value="true" type="bool"/>
     </Option>
     <Option name="buildings_" type="Map">
@@ -6489,6 +6658,23 @@
       <Option name="metadata"/>
       <Option name="name" value="pandenselected" type="QString"/>
       <Option name="parameter_type" value="source" type="QString"/>
+    </Option>
+    <Option name="roofsurfaces_" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" value="RoofSurfaces_" type="QString"/>
+      <Option name="file_filter" value="Microsoft Excel (*.xlsx);;CSV (*.csv)" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="help" value="" type="QString"/>
+      <Option name="metadata" type="Map">
+        <Option name="_modelChildId" value="script:buildings3d_1" type="QString"/>
+        <Option name="_modelChildOutputName" value="RoofSurfaces_" type="QString"/>
+        <Option name="_modelChildProvider" value="script" type="QString"/>
+      </Option>
+      <Option name="name" value="roofsurfaces_" type="QString"/>
+      <Option name="parameter_type" value="fileDestination" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
     </Option>
     <Option name="trafos_enexisstedin" type="Map">
       <Option name="data_types"/>
